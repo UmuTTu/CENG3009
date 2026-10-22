@@ -1,0 +1,34 @@
+GET http://localhost:5046/demands
+###
+GET http://localhost:5046/demands/TN121435
+###
+POST  http://localhost:5046/demands
+Content-Type: application/json
+
+{
+    "Başlık": "",
+    "Açıklama": "asdasdas",
+    "Oluşturan_Kişi": "12312342",
+    "Durum": "Revizyon",
+    "Oluşturma_Tarihi": "2025-12-01"
+
+
+}
+###
+PUT  http://localhost:5046/demands/TN121435
+Content-Type: application/json
+
+{
+    "Başlık": "ahmet",
+    "Açıklama": "dafssf",
+    "Oluşturan_Kişi": "Mehmet",
+    "Durum": "rebi123123131223zyon",
+    "Oluşturma_Tarihi": "2025-12-01"
+}
+###
+DELETE  http://localhost:5046/demands/TN121435
+###
+POST  http://localhost:5046/demands/bulk-delete
+Content-Type: application/json
+
+["TN121435", "TN121436"]
